@@ -5,8 +5,8 @@ import org.junit.Test;
 
 
 public class TestJUnit {
-  private BinaryString bitset1,bitset2;
-  private String  bits= "1001001010";
+  private BinaryString bitset1,bitset2,bitset3;
+  private String  bits= "1001001010",bst3="100101";
 	
   //Inicializar todos los bitset
   @Before
@@ -24,7 +24,11 @@ public class TestJUnit {
 	}
 	
 	
-	
+	@Test			//Ejercicio 2
+	public void testSetBit(){
+		bitset3.set(1,'1');
+		assertEquals('1', bitset3.get(1));
+	}
 	
 	
 	
