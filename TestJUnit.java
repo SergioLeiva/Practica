@@ -3,7 +3,6 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-
 public class TestJUnit {
   private BinaryString bitset1,bitset2,bitset3,bitset4;
   private String  bits= "1001001010",bst3="100101", bst4="0110101";
@@ -29,12 +28,16 @@ public class TestJUnit {
 		bitset3.set(1,'1');
 		assertEquals('1', bitset3.get(1));
 	}
-	//Ejercicio 3
+					//Ejercicio 3
 	@Test(expected = BinaryStringException.class)
 	public void testGetOutOfLimitBit(){
 		bitset4.get(56);
 	}
-	
+					//Ejercicio 4
+	@Test(expected = BinaryStringException.class)
+	public void testSetOutOfLimitBit(){
+		bitset4.set(56,'0');
+	}
 	
 
 }

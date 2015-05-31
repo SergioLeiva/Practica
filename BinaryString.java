@@ -1,6 +1,7 @@
 import java.util.Random;
 
 
+
 public class BinaryString {
 	private char[] bits;
 
@@ -27,11 +28,17 @@ public class BinaryString {
 	}
 
 	public void set(int index,char value){
+		try{
+			if(value =='0' || value =='1'){
 			bits[index]=value;	
-			
-			
-			
+			}else{
+				throw new BinaryStringException();
 			}
+			
+		}catch(BinaryStringException e){
+			throw new BinaryStringException();
+		}
+	}
 
 	public char get(int index){
 		try{
