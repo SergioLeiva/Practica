@@ -3,7 +3,6 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import bgfhngfbv.BinaryStringException;
 
 public class TestJUnit {
 	private BinaryString bitset1, bitset2, bitset3, bitset4;
@@ -52,6 +51,12 @@ public class TestJUnit {
 
 		}
 
+	}
+
+	// Ejercicio 6
+	@Test(expected = BinaryStringException.class)
+	public void testInvalidBitValue() {
+		bitset4.set(3, '6');
 	}
 
 }
