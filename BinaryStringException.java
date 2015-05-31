@@ -1,5 +1,6 @@
 
 
+@SuppressWarnings("serial")
 public class BinaryStringException  extends RuntimeException{
 	public BinaryStringException() {
 	super();
